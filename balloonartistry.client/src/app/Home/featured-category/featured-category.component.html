@@ -1,0 +1,20 @@
+<div class="pt-4 home-featured-category">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 col-4 mb-4" *ngFor="let category of featuredCategories">
+        <div class="featured-category-box">
+          <a [href]="category.url">
+            <picture>
+              <source media="(max-width:600px)" [srcset]="'https://aniballoons.com/images/category_images/' + category.smallImage">
+              <source media="(max-width:1000px)" [srcset]="'https://aniballoons.com/images/category_images/' + category.image">
+              <img [src]="'https://aniballoons.com/images/category_images/' + category.image"
+                   [alt]="category.name"
+                   loading="lazy"
+                   style="width:100%;">
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

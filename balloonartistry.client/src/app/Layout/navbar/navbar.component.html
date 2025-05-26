@@ -20,10 +20,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="https://aniballoons.com/delhi-ncr/welcome-baby-decoration">Welcome Baby Decoration</a>
-              <a class="dropdown-item" href="https://aniballoons.com/delhi-ncr/kids-birthday-decoration">Kids Birthday Decoration</a>
-              <a class="dropdown-item" href="https://aniballoons.com/delhi-ncr/cartoon-theme-decoration">Cartoon Theme Decoration</a>
-              <!-- Add other items as needed -->
+              <a class="dropdown-item" *ngFor="let category of balloonCategories" [href]="category.url">
+                {{ category.name }}
+              </a>
             </div>
           </li>
           <li class="nav-item"><a class="nav-link" href="https://aniballoons.com/experiences">Packages</a></li>
